@@ -42,7 +42,7 @@ if __name__ == "__main__":
     matchData["date"] = pd.to_datetime(matchData["date"])
     matchData = createPredictors(matchData)
     
-    rf = RandomForestClassifier(n_estimators=50, min_samples_split=10, random_state=1)
+    rf = RandomForestClassifier(n_estimators=1000, min_samples_split=10, random_state=1)
     predictorColumns = ["venue_code", "opp_code", "hour", "day_code"]
     
     groupedBy = matchData.groupby("team")
